@@ -1,0 +1,49 @@
+---
+import "../styles.css"
+import Nav from "../components/Nav.astro"
+import { version } from "../assets/config"
+
+type Props = { title: string }
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Nav />
+		<main class="container -container-sm">
+			<slot />
+		</main>
+		<footer class="text-bg-dark py-3 text-center">
+			<p>نسخه: <code class="text-info">{version}</code></p>
+			<p>ساخته شده توسط: <a class="link-info" href="https://eitaa.com/wd_bahrami">بهرامی</a></p>
+		</footer>
+		<script>
+      // Import only what you need
+      // import 'bootstrap/js/dist/alert'
+      // import 'bootstrap/js/dist/button'
+      // import 'bootstrap/js/dist/carousel'
+      // import 'bootstrap/js/dist/collapse'
+      // import 'bootstrap/js/dist/dropdown'
+      // import 'bootstrap/js/dist/modal'
+      // import 'bootstrap/js/dist/offcanvas'
+      // import 'bootstrap/js/dist/popover'
+      // import 'bootstrap/js/dist/scrollspy'
+      // import 'bootstrap/js/dist/tab'
+      // import 'bootstrap/js/dist/toast'
+      // import 'bootstrap/js/dist/tooltip'
+
+			// Import everything
+			import 'bootstrap/dist/js/bootstrap'
+		</script>
+	</body>
+</html>

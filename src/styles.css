@@ -1,0 +1,16 @@
+@import "bootstrap/dist/css/bootstrap.rtl.css";
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url(./assets/Vazirmatn[wght].woff2) format("woff2");
+}
+
+:root {
+  --bs-font-sans-serif: Vazirmatn, sans-serif;
+}
+
+.-container-sm {
+  max-width: 35em;
+  margin-right: auto;
+  margin-left: auto;
+}

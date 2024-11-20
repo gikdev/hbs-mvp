@@ -1,0 +1,19 @@
+---
+import PRODUCTS from "../assets/products"
+import ProductCard from "../components/ProductCard.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="ویترین - حیات‌برتر">
+  <div class="text-center my-5">
+    <p>بسم الله الرحمن الرحیم</p>
+    <h1>ویترین محصولات حیات‌برتر</h1>
+    <p>به ویترین محصولات حیات‌برتر خوش اومدین 🌺 اینجا میتونین کلی جایگزین سالم و خوشمزه برای خوراکی‌های متداول پیدا کنی 😉👌🏻</p>
+  </div>
+
+  <div class="vstack align-items-center gap-3 my-5">
+    {PRODUCTS.map(product => (
+      <ProductCard {...product} />
+    ))}
+  </div>
+</Layout>

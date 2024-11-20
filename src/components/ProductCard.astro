@@ -1,0 +1,27 @@
+---
+import type { IProduct } from "../assets/products"
+
+type Props = IProduct
+
+const { title, image, description } = Astro.props
+---
+
+<div class="card" style="max-width: 20rem;">
+  <img src={image} alt="" class="card-image-top">
+  <div class="card-body text-center">
+    <h2 class="card-title">{title}</h2>
+    <p class="card-text">
+      {!Array.isArray(description) ? description : description.map(sentence => (
+        <span>{sentence}</span><br />
+      ))}
+    </p>
+    <div class="btn-group" style="width: 100%;">
+      <a href="https://eitaa.com/admin_h_b" class="btn btn-success btn-grow">خرید</a>
+      <a href="https://eitaa.com/haiate_bartar" class="btn btn-outline-info btn-grow">اطلاعات بیشتر</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .btn-grow { width: 100%; }
+</style>
